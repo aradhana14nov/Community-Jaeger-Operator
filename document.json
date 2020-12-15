@@ -1,15 +1,15 @@
 {
-  "name": "etcd Operator",
-  "description": "etcd Operator",
-  "logo": "_images/SalesStack.png",
+  "name": "Jaeger Operator",
+  "description": "Jaeger Operator",
+  "logo": "_images/jaeger-logo.png",
   "has_supporting_content": true,
-  "stack_id": "etcd-operator",
+  "stack_id": "jaeger-operator",
   "type": "stack",
   "categories": ["Database"],
   "platform": "Kubernetes",
   "cover": "cover.md",
   "meta": {
-    "Database": ["etcd"],
+    "Database": ["jaeger"],
     "Type":[
          "Operators"
       ],
@@ -17,12 +17,32 @@
   },
 "deployment_information": {
   "Operator Project": "NA",
-  "Deployment Namespace": "my-etcd"
+  "Deployment Namespace": "observability"
 },
   "commands": [
+      {
+      "description": "Create Namespace",
+      "exec": "kubectl create namespace observability"
+    },
+    {
+      "description": "Create CRDs ",
+      "exec": "kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/crds/jaegertracing.io_jaegers_crd.yaml"
+    },
+    {
+      "description": "Create Service Account ",
+      "exec": "kubectl create -n observability -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/service_account.yaml"
+    },
+    {
+      "description": "Create role",
+      "exec": "kubectl create -n observability -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/role.yaml"
+    },
+    {
+      "description": "Create role_binding",
+      "exec": "kubectl create -n observability -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/role_binding.yaml"
+    }
     {
       "description": "Install Operator",
-      "exec": "kubectl create -f https://operatorhub.io/install/etcd.yaml"
+      "exec": "kubectl create -n observability -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/operator.yaml"
     }
   ],
   "display": [

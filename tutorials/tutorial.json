@@ -1,33 +1,21 @@
 {
-   "name":"etcd Operator Tutorial",
+   "name":"jaeger Operator Tutorial",
    "appLayout":"accordion",
    "appTheme":"g90",
    "footer":"footer.md",
    "tutorials":[
-      {
-         "description":"Check Operator Deployment Status",
+       {
+         "description":"Details about Jaeger Operator",
+         "duration":"30 min",
+         "tutorial_name":"architectural-flow.md",
+         "title":"About Jaeger Operator"
+      },
+     {
+         "description":"create Instance of jaeger operator",
          "duration":"5 min",
-         "tutorial_name":"etcd-operator-tutorial.md",
-         "title":"etcd Operator status check"
+         "tutorial_name":"create_instance_of_Jaeger_Operator.md",
+         "title":"Create Instance of Jaeger Operator"
       },
-      {
-         "description":"A User Guide to create an instance of etcd cluster",
-         "duration":"30 min",
-         "tutorial_name":"create_instance_of_etcd_cluster.md",
-         "title":"Tutorial to Create instance of etcd cluster "
-      },
-      {
-         "description":"Add Users and Enable Authentication",
-         "duration":"30 min",
-         "tutorial_name":"add_user_enable_auth.md",
-         "title":"How to Add Users and Enable Authentication"
-      },
-      {
-         "description":"How to resize an etcd cluster",
-         "duration":"30 min",
-         "tutorial_name":"resize_etcd_cluster_tutorial.md",
-         "title":"Resize etcd cluster"
-      }
       
    ],
    "usefulLinks":[
