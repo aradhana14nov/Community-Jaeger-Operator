@@ -1,13 +1,13 @@
 {
-  "title": "etcd Operator",
-  "description": "etcd Operator",
-  "logo": "_images/SalesStack.png",
+  "title": "jaeger operator",
+  "description": "Jaeger Operator",
+  "logo": "_images/jaeger-logo.png",
   "enabled": true,
   "category_label": [
     "Operators"
   ],
   "document": "data-logging-stack",
-  "stack_id": "etcd-operator",
+  "stack_id": "jaeger-operator",
   "type": "stack",
   "categories": [
     "Database"
@@ -16,7 +16,7 @@
   "has_support": true,
   "has_dataset": false,
   "has_api": false,
-  "git_url": "https://github.com/operator-playground-io/etcd-operator.git",
+  "git_url": "https://github.com/aradhana14nov/Community-Jaeger-Operator.git",
   "git_commit": "1095792ff8849eff7d95abdc7b1b44afb756c46b",
   "installTime": "5 minutes",
   "isStacksSaved": true

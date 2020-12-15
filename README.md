@@ -1,1 +1,1 @@
-# etcd-operator
+# Jaeger-Operator
